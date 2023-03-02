@@ -1,0 +1,65 @@
+/* Habillage des cartes */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centrer les cartes horizontalement */
+  align-items: stretch; /* Ajuster la hauteur des cartes */
+  gap: 20px; /* Ajouter un espacement entre les cartes */
+}
+
+.card {
+  flex-basis: 450px;
+  flex-grow: 1;
+  margin: 0; /* Supprimer la marge par défaut pour une présentation plus compacte */
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24); /* Ajouter une ombre pour créer de la profondeur */
+  transition: all .2s ease-in-out; /* Ajouter une transition pour les effets de survol */
+  overflow: hidden; /* Cacher le contenu débordant de la carte */
+  border-radius: 5px; /* Ajouter une bordure arrondie */
+  position: relative; /* Position relative pour les pseudos-éléments */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Ajouter une légère translation vers le haut au survol */
+  box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.22); /* Ajouter une ombre plus prononcée au survol */
+}
+
+.card::before {
+  content: ""; /* Ajouter un pseudo-élément pour le fond des cartes */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Placer le pseudo-élément en dessous de la carte */
+  background-image: linear-gradient(to bottom right, #f2f2f2, #ffffff); /* Ajouter un dégradé pour le fond */
+  border-radius: 5px; /* Ajouter une bordure arrondie pour le pseudo-élément */
+  opacity: 0; /* Cacher le pseudo-élément par défaut */
+  transition: opacity .2s ease-in-out; /* Ajouter une transition pour l'opacité */
+}
+
+.card:hover::before {
+  opacity: 1; /* Afficher le pseudo-élément au survol */
+}
+
+.card img {
+  width: 100%;
+  height: 250px; /* Définir la hauteur de l'image pour éviter les distorsions */
+  object-fit: cover; /* Ajuster la taille de l'image pour remplir complètement la carte */
+  border-radius: 5px 5px 0 0; /* Ajouter une bordure arrondie pour l'image */
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd; /* Ajouter une bordure inférieure pour séparer le titre et le contenu */
+  position: relative; /* Position relative pour les pseudos-éléments */
+  z-index: 1; /* Placer le titre au dessus du pseudo-élément */
+}
+
+.card h3::before {
+  content: ""; /* Ajouter un pseudo
