@@ -1,130 +1,110 @@
-/* Importing Google fonts */
-@import url("https://fonts.googleapis.com/css?family=Lora:400,700|Roboto:300,400,700");
-
-/* Importing component files */
-@import url("components/container.css");
-@import url("components/avatar.css");
-@import url("components/button.css");
-@import url("components/banner.css");
-@import url("components/card.css");
-@import url("components/hero.css");
-@import url("components/list.css");
-@import url("components/navbar.css");
-@import url("components/tab.css");
-@import url("components/form.css");
-
-/* General style rules for fonts and colors */
+* Ajout de bordures et ombres */
 body {
-  font-family: 'Lora', serif;
-  font-size: 18px;
-  margin: 0px;
-}
-h1, h2, h3 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
-}
-a {
-  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-/* Colors */
-:root {
-  --primary-color: #e73c7e;
-  --secondary-color: #f5f5f5;
-  --text-color: #333;
-}
-
-/* Header */
-header {
-  background-color: var(--secondary-color);
-  border-bottom: 1px solid #ccc;
+.header {
+  border-bottom: 1px solid #ddd;
   padding: 10px;
-}
-.logo {
-  font-size: 30px;
-  font-weight: bold;
-  color: var(--text-color);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
 
-/* Navigation bar */
-.navbar {
-  background-color: var(--primary-color);
-  color: white;
+img {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.step img {
+  max-width: 300px;
+}
+
+.restaurant img {
+  max-width: 700px;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Mise en page professionnelle et attrayante */
+body {
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-}
-.navbar a {
-  color: white;
-  margin-right: 10px;
-}
-.navbar a:hover {
-  text-decoration: underline;
+  background-color: #fff;
 }
 
-/* Hero section */
-.hero {
-  background-image:
-    /* Transparent gradient above */
-    linear-gradient(-225deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.1) 50%),
-    /* Then image below */
-    url('images/hero.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 400px;
-  display: flex;
-  align-items: center;
-}
-.hero h1 {
-  font-size: 60px;
-  color: white;
-  margin-bottom: 10px;
-}
-.hero p {
+.logo {
   font-size: 30px;
-  color: white;
-  margin-bottom: 20px;
+  font-weight: bold;
+  color: #f15a29;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.1);
 }
 
-/* Card */
-.card {
-  background-color: var(--secondary-color);
-  border-radius: 5px;
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
-  overflow: hidden;
-  width: 300px;
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px;
 }
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-.card h3 {
-  margin: 10px;
+
+.nav a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: #333;
   font-size: 20px;
-  color: var(--text-color);
-}
-.card p {
-  margin: 10px;
-  font-size: 16px;
-  color: #999;
+  font-weight: bold;
+  border: 1px solid #f15a29;
+  padding: 5px 10px;
+  border-radius: 20px;
+  transition: all 0.2s ease-in-out;
 }
 
-/* List */
-.list {
-  margin: 20px 0px;
+.nav a:hover {
+  background-color: #f15a29;
+  color: #fff;
 }
-.list ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+
+.content {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
-.list li {
-  margin-bottom: 10px;
-  border-left: 2px solid var(--primary-color);
-  padding-left: 10px;
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #f15a29;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.1);
 }
-.list li:last-child {
-  margin-bottom:
+
+.description {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.footer {
+  border-top: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
